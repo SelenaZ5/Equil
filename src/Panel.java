@@ -10,7 +10,6 @@ import java.util.TimerTask;
 public class Panel extends javax.swing.JPanel implements ActionListener {
 
     Player player;
-    detectColor switchColor;
     Rectangle restartRect;
     Rectangle home;
     int cameraX;
@@ -23,7 +22,6 @@ public class Panel extends javax.swing.JPanel implements ActionListener {
         home = new Rectangle(625,25,50,50);
 
         player = new Player(400,300,this);
-        switchColor = new detectColor();
         reset();
 
         toSwitch = false;
@@ -76,6 +74,7 @@ public class Panel extends javax.swing.JPanel implements ActionListener {
 //        toSwitch = false;
     }
 
+    //create floor tiles
     public void createWalls(int o){
         int a = 50;
         Random rand = new Random();

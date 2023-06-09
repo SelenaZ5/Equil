@@ -27,28 +27,6 @@ public class Player {
         box = new Rectangle(x,y ,wid, hei);
         currentColor = 0;
     }
-
-    public boolean intersects(Player p){
-        int tw = this.wid;
-        int th = this.hei;
-        int rw = p.wid;
-        int rh = p.hei;
-        if(rw <= 0 || rh <= 0 || tw <= 0 || th <= 0){
-            return false;
-        }
-        int tx = this.x;
-        int ty = this.y;
-        int rx = p.x;
-        int ry = p.y;
-        rw += rx;
-        rh += ry;
-        tw += tx;
-        th += ty;
-        return ((rw < rx || rw > tx) &&
-                (rh < ry || rh > ty) &&
-                (tw < tx || tw > rx) &&
-                (th < ty || th > ry));
-    }
     public void set(){
         //motion control
         if(left && right || !left && !right){

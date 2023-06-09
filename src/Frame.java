@@ -6,7 +6,7 @@ public class Frame extends javax.swing.JFrame{
         Panel panel = new Panel();
         panel.setLocation(0,0);
         panel.setSize(this.getSize());
-        panel.setBackground(Color.LIGHT_GRAY);
+        panel.setBackground(SystemColor.PINK);
         panel.setVisible(true);
         this.add(panel);
 
